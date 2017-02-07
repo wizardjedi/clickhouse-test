@@ -45,5 +45,5 @@ CREATE TABLE statistics (
 	message_id String,
 	sms_send_count UInt8,
 	sms_delivered_count UInt8
-) ENGINE = MergeTree (EventDate, (EventDateTime,abonent,send_name_id,distribution_id,partner_id,agregator_id,operator_id, region_id), 8192);
+) ENGINE = MergeTree (EventDate, (EventDateTime,partner_id), 8192);
 
