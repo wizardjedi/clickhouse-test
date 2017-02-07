@@ -57,3 +57,5 @@ Use `\timing` command for psql to turn on timings.
 |`select count(*) from statistics;`|0.01|0.264|
 |`select count(distinct abonent) from statistics;`|0.051|1.586|
 |`select count(*), count(distinct operator_id), count(distinct region_id), count(distinct abonent), count(distinct send_name_id) from statistics;`|0.111|6.595|
+|`select count(*) from statistics where EventDate>'2016-05-05' and EventDate<'2016-07-05' and partner_id in (1,10,15,25,900);`|0.007|0.52|
+
