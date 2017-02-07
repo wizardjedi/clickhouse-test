@@ -47,3 +47,11 @@ Type "help" for help.
 
 postgres=# 
 ```
+
+Use `\timing` command for psql to turn on timings.
+
+# Try queries
+
+|query|ClickHouse|PostgreSQL|
+|---|---|---|
+|||
