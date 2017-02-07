@@ -54,6 +54,4 @@ Use `\timing` command for psql to turn on timings.
 
 |query|ClickHouse|PostgreSQL|
 |---|---|---|
-|```
-select count(*) from statistics;
-```|0.01|0.264|
+|`select count(*) from statistics;`|0.01|0.264|
