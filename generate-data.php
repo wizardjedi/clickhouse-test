@@ -4,7 +4,7 @@ include('vendor/autoload.php');
 
 $faker = Faker\Factory::create();
 
-$rounds = 1;
+$rounds = 10;
 $items = 2000;
 
 $days = 1000;
@@ -23,7 +23,7 @@ for ($k=-$days;$k<0;$k++) {
 		    $agregator_id = $partner_id % 15;
 		    $operator_id = $faker->numberBetween(1,2500);
 		    $region_id = $faker->numberBetween(1,300);
-		    $message_id = '#'.($i*$items + $j);
+		    $message_id = '#'.(($k+$days)*$days*$items*$rounds + $i*$items + $j);
 		    $sms_send_count = $faker->numberBetween(1,15);
 		    $sms_delivered_count = $faker->numberBetween(1,$sms_send_count);
 		
