@@ -58,6 +58,5 @@ Use `\timing` command for psql to turn on timings.
 |`select count(distinct abonent) from statistics;`|0.051|1.586|
 |`select count(*), count(distinct operator_id), count(distinct region_id), count(distinct abonent), count(distinct send_name_id) from statistics;`|0.111|6.595|
 |`select count(*) from statistics where EventDate>'2016-05-05' and EventDate<'2016-07-05' and partner_id in (1,10,15,25,900);`|0.007|0.52|
-|ch:`select toMonth(EventDate), sum(sms_send_count), sum(sms_delivered_count) from statistics group by toMonth(EventDate);` \
-pg:`select extract(month from EventDate), sum(sms_send_count), sum(sms_delivered_count) from statistics group by extract(month from EventDate);|0.047|0.986|
-`
+| * ch:`select toMonth(EventDate), sum(sms_send_count), sum(sms_delivered_count) from statistics group by toMonth(EventDate);`|0.047|-|
+| * pg:`select extract(month from EventDate), sum(sms_send_count), sum(sms_delivered_count) from statistics group by extract(month from EventDate);`|-|0.986|
